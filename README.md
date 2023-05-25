@@ -1,5 +1,4 @@
-# CAD
-CAD for the PID project
+
 # PID car
 ### Description
 in this project, we were instructed to design, build, and program a device that uses PID control, with these requirements:
