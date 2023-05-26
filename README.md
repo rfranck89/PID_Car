@@ -38,7 +38,123 @@ early design
 
 ### Code 
 
-Don't forget to comment the first 3 lines of your code!   Names,  Title,   and 1line to describe what this thing is supposed to do.
+```python
+# Jabari Bright & Ryan Franck
+# PID car
+# The code makes the car move
+
+
+
+from simple_pid import PID
+import time
+import board
+import adafruit_hcsr04
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+
+# Code to control Hbridge
+from time import sleep
+from digitalio import DigitalInOut, Direction, Pull
+from pwmio import PWMOut
+from adafruit_motor import motor as Motor
+DEBUG = True  # mode of operation; False = normal, True = debug
+OP_DURATION = 5  # operation duration in seconds
+drv8833_ain1 = PWMOut(board.D9)
+drv8833_ain2 = PWMOut(board.D10)
+drv8833_bin1 = PWMOut(board.D11)
+drv8833_bin2 = PWMOut(board.D12)
+drv8833_sleep = DigitalInOut(board.D3)
+motor_a = Motor.DCMotor(drv8833_ain1, drv8833_ain2)
+motor_b = Motor.DCMotor(drv8833_bin1, drv8833_bin2)
+
+# print status of motor
+def print_motor_status(motor):
+    if motor == motor_a:
+        motor_name = "A"
+    elif motor == motor_b:
+        motor_name = "B"
+    else:
+        motor_name = "Unknown"
+    print(f"Motor {motor_name} throttle is set to {motor.throttle}.")
+
+# Basic control of motor
+def basic_operations():
+    # Drive forward at full throttle
+    motor_a.throttle = 1.0
+    if DEBUG: print_motor_status(motor_a)
+    sleep(OP_DURATION)
+    # Coast to a stop
+    motor_a.throttle = None
+    if DEBUG: print_motor_status(motor_a)
+    sleep(OP_DURATION)
+    # Drive backwards at 50% throttle
+    motor_a.throttle = -0.5
+    if DEBUG: print_motor_status(motor_a)
+    sleep(OP_DURATION)
+    # Brake to a stop
+    motor_a.throttle = 0
+    if DEBUG: print_motor_status(motor_a)
+    sleep(OP_DURATION)
+# Main
+drv8833_sleep.direction = Direction.OUTPUT
+drv8833_sleep.value = True  # enable (turn on) the motor driver
+if DEBUG: print("Running in DEBUG mode.  Turn off for normal operation.")
+
+# use this loop to test motor
+# while True:
+#     basic_operations()  # perform basic motor control operations on motor A
+
+setpoint = 15
+
+# Create PID object
+pid = PID(0.2, 0.01, 0.01, setpoint=setpoint, output_limits=(-.5, .5))
+dis = 0
+prev_dis = 0
+
+while True:
+    
+    # grabs the current distance
+    try:
+        dis = sonar.distance
+        # print(dis)
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.05)
+
+      # Compute new output from the PID according to the systems current value
+    print("Distance: ", dis)
+    if dis == 0:
+        dis = prev_dis
+    else:
+        prev_dis = dis
+
+    control = pid(dis)
+    print("Control: ", control)
+    if abs(dis-setpoint) < .5:
+        motor_a.throttle = control
+        motor_b.throttle = control
+        print("   Control is good!")
+    else:
+        # Feed the PID output to the system and get its current value
+        motor_a.throttle = control
+        motor_b.throttle = control
+
+    # ask are we at the setpoint
+    # if dis > setpoint:
+    #     print('move foward')
+    #     motor_a.throttle = 1.0
+    #     motor_b.throttle = 1.0
+
+    # elif dis < setpoint:
+    #     print('move back')
+    #     motor_a.throttle = -0.5
+    #     motor_b.throttle = -0.5
+    # else:
+    #     print("stop")
+    #     motor_a.throttle = 0
+    #     motor_b.throttle = 0
+
+
+```
 
 ### Build
 
