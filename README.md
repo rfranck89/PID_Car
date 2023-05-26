@@ -30,6 +30,8 @@ early design
      - LED
      - resistor
      - 3D printer
+     - 4 male-female wires
+     - 6 male- male wires
      
      
 ### Wiring Diagram
