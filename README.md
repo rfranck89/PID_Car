@@ -13,15 +13,24 @@ To commit from VS Code:
 If you get an error about user.name and user.email
 
 ## Planning 
+early design
+![early design](https://github.com/rfranck89/PID_Car/assets/71406948/59f59c81-4730-4484-8cd8-582610002258)
 
-### planning documents, schedules, etc (change this name)
-
-### Initial design or planning sketches (something like that)
 
 ## Design
 
 ### Bill of Materials
-     2 motars
+     - 2 motors
+     - circuitPython circuit
+     - breadboard
+     - sensor
+     - H bridge
+     - battery pack
+     - 6 AA battery's
+     - LED
+     - resistor
+     - 3D printer
+     
      
 ### Wiring Diagram
 ![Screenshot 2023-05-26 1 13 11 PM](https://github.com/rfranck89/PID_Car/assets/71406948/6848e501-18e5-44a6-84b3-e9e936e7e482)
