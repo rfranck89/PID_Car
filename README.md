@@ -21,10 +21,11 @@ If you get an error about user.name and user.email
 ## Design
 
 ### Bill of Materials
-
+     2 motars
+     
 ### Wiring Diagram
+![Screenshot 2023-05-26 1 13 11 PM](https://github.com/rfranck89/PID_Car/assets/71406948/6848e501-18e5-44a6-84b3-e9e936e7e482)
 
-maybe include something about the wiring for the h bridge, with a link to the image on adafruit.
 
 ### Code 
 
@@ -32,7 +33,7 @@ Don't forget to comment the first 3 lines of your code!   Names,  Title,   and 1
 
 ### Build
 
-Cad pictures here, any documentation about the steps to design and build it.
+
 
 ![PIDcarpic1](https://github.com/rfranck89/PID_Car/assets/71406948/5adda2c4-c269-4d38-a6f6-b488ad919d38)
 ![PIDcarpic4](https://github.com/rfranck89/PID_Car/assets/71406948/32a47762-aff2-43fb-aa49-eb47a56330de)
@@ -64,4 +65,4 @@ https://github.com/rfranck89/PID_Car/assets/71406948/09cf27b8-cba5-4fd4-b060-db4
 
 ## Reflection
 
-so the assighnment was hard i asked my teachers for help so I recommend asking your teachers for help if you dont know what youre doing, because I kept messing with the PID and I couldnt get it to run smoothly so I asked the teacher for help, I also recommend working with a partner because this will take way too long for you to do it alone,thats about it
+so the assighnment was hard i asked my teachers for help so I recommend asking your teachers for help if you dont know what youre doing, because I kept messing with the PID and I couldnt get it to run smoothly so I asked the teacher for help, I also recommend working with a partner because this will take way too long for you to do it alone. also the car turns when it goes backward because of the front so if I could go back and redo this project i would make it a four wheeler instead of three.
