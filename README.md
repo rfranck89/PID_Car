@@ -50,11 +50,18 @@ maybe include something about the wiring for the h bridge, with a link to the im
 ![IMG_4601](https://github.com/rfranck89/PID_Car/assets/71406948/1cc91827-389f-4128-9847-b437e8f49bc5)
 ![IMG_4602](https://github.com/rfranck89/PID_Car/assets/71406948/3425c312-b369-4460-8f0f-74c04fdae559)
 ![IMG_4604](https://github.com/rfranck89/PID_Car/assets/71406948/4e628646-0b1b-4a46-8f44-344ec67814d5)
+![IMG_4601](https://github.com/rfranck89/PID_Car/assets/71406948/11c7b6b0-4781-4854-a985-86b68ae3eefc)
+
+
+
+https://github.com/rfranck89/PID_Car/assets/71406948/09cf27b8-cba5-4fd4-b060-db48174100f3
+
+
+
+
 
 
 
 ## Reflection
 
-Most importantly:  What would you tell your past self, or the future engingeering student, to make their life easier with this project, or make their project better, or avoid mistakes you made...
-avoid the "dear diary" BS
-
+so the assighnment was hard i asked my teachers for help so I recommend asking your teachers for help if you dont know what youre doing, because I kept messing with the PID and I couldnt get it to run smoothly so I asked the teacher for help, I also recommend working with a partner because this will take way too long for you to do it alone,thats about it
