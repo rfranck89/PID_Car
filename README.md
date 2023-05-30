@@ -16,9 +16,6 @@ If you get an error about user.name and user.email
 early design
 ![early design](https://github.com/rfranck89/PID_Car/assets/71406948/59f59c81-4730-4484-8cd8-582610002258)
 
-
-## Design
-
 ### Bill of Materials
      - 2 motors
      - circuitPython circuit
@@ -32,6 +29,10 @@ early design
      - 3D printer
      - 4 male-female wires
      - 6 male- male wires
+     - 20 screws
+     - 15 Nuts
+     - 4 standoffs
+     - 1 ball caster
      
      
 ### Wiring Diagram
@@ -171,7 +172,12 @@ while True:
 
 
 
-maybe include something about the wiring for the h bridge, with a link to the image on adafruit.
+CAD components:
+- Base (laser cut)                                                                   
+- Ultrasonic sensor holder (3D printed)                                                                                 
+- Switch and LED holder (3D printed)
+- motor holders(2) (3D printed)
+- axle lengtheners(2) (3D printed)
 
 ## Final Product
 ![IMG_4603](https://github.com/rfranck89/PID_Car/assets/71406948/fd39bc8b-bb34-404e-a5eb-b44212b3dbad)
