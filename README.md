@@ -192,4 +192,4 @@ https://github.com/rfranck89/PID_Car/assets/71406948/09cf27b8-cba5-4fd4-b060-db4
 
 ## Reflection
 
-so the assighnment was hard i asked my teachers for help so I recommend asking your teachers for help if you dont know what youre doing, because I kept messing with the PID and I couldnt get it to run smoothly so I asked the teacher for help, I also recommend working with a partner because this will take way too long for you to do it alone. also the car turns when it goes backward because of the front so if I could go back and redo this project i would make it a four wheeler instead of three.
+so the assignment was hard i asked my teachers for help so I recommend asking your teachers for help if you don't know what you're doing, because I kept messing with the PID and I couldnt get it to run smoothly so I asked the teacher for help, I also recommend working with a partner because this will take way too long for you to do it alone. also the car turns when it goes backward because of the front so if I could go back and redo this project i would make it a four wheeler instead of three.
